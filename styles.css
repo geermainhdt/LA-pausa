@@ -20,7 +20,7 @@
   --honey:        #C9963A;
   --white:        #FFFFFF;
 
-  --font-serif:   'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Anton', Impact, sans-serif;
   --font-sans:    'Inter', system-ui, sans-serif;
 
   --r-sm:  8px;
@@ -67,10 +67,12 @@ ul { list-style: none; }
 .label--light { color: var(--green-pale); }
 
 .section-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.05;
+  letter-spacing: .02em;
+  text-transform: uppercase;
   color: var(--dark);
 }
 .section-title--light { color: var(--white); }
@@ -306,15 +308,17 @@ ul { list-style: none; }
 }
 
 .hero__title {
-  font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 7vw, 6rem);
-  font-weight: 300;
-  line-height: 1.05;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .03em;
+  text-transform: uppercase;
   color: var(--white);
   margin-bottom: 24px;
 }
 .hero__title em {
-  font-style: italic;
+  font-style: normal;
   color: var(--green-pale);
 }
 
@@ -598,9 +602,11 @@ ul { list-style: none; }
   padding: 28px 32px;
 }
 .menu__info h3 {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
   font-weight: 400;
+  letter-spacing: .04em;
+  text-transform: uppercase;
   color: var(--dark);
   margin-bottom: 10px;
 }
@@ -696,11 +702,13 @@ ul { list-style: none; }
   color: var(--green);
 }
 .menu__card-info h4 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-transform: uppercase;
   color: var(--dark);
-  line-height: 1.2;
+  line-height: 1.1;
 }
 .menu__card-info p {
   font-size: .825rem;
