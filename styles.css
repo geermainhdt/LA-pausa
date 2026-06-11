@@ -822,6 +822,17 @@ ul { list-style: none; }
   border-color: var(--green-pale);
   box-shadow: 0 8px 24px rgba(78,107,61,.08);
 }
+a.contact__item--link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a.contact__item--link:hover {
+  border-color: var(--green-primary);
+  box-shadow: 0 8px 24px rgba(78,107,61,.15);
+}
+a.contact__item--link strong { color: var(--text); }
+a.contact__item--link p { color: var(--text-muted); }
 .contact__item-icon {
   width: 40px; height: 40px;
   background: var(--green-bg);
