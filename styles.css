@@ -851,6 +851,50 @@ a.contact__item--link:hover {
 }
 a.contact__item--link strong { color: var(--text); }
 a.contact__item--link p { color: var(--text-muted); }
+
+/* ── Social / address buttons ─────────────────── */
+.contact__social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+.contact__social-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--sand);
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.contact__social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+.contact__social-btn--insta {
+  background: #fff;
+  color: #C13584;
+  border-color: #e0b0d0;
+}
+.contact__social-btn--insta:hover { border-color: #C13584; }
+.contact__social-btn--fb {
+  background: #fff;
+  color: #1877F2;
+  border-color: #b0c8f4;
+}
+.contact__social-btn--fb:hover { border-color: #1877F2; }
+.contact__social-btn--addr {
+  background: #fff;
+  color: var(--green-primary);
+  border-color: var(--green-pale);
+  font-size: .82rem;
+}
+.contact__social-btn--addr:hover { border-color: var(--green-primary); }
+
 .contact__item-icon {
   width: 40px; height: 40px;
   background: var(--green-bg);
