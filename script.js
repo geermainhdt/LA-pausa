@@ -67,6 +67,68 @@ const observer = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => observer.observe(el));
 
+/* ── Scroll progress bar ──────────────────────── */
+const progressBar = document.createElement('div');
+progressBar.className = 'scroll-progress';
+document.body.prepend(progressBar);
+window.addEventListener('scroll', () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (window.scrollY / max * 100) + '%';
+}, { passive: true });
+
+/* ── Split-text word-by-word on titles ────────── */
+document.querySelectorAll('.section-title, .hero__title').forEach(el => {
+  el.innerHTML = el.innerHTML.split(/(<br\s*\/?>|\s+)/g).map(w => {
+    if (!w || /^(<br\s*\/?>|\s+)$/.test(w)) return w;
+    return `<span class="split-word"><span>${w}</span></span>`;
+  }).join('');
+});
+const splitObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.querySelectorAll('.split-word').forEach((w, i) => {
+      setTimeout(() => w.classList.add('in'), i * 80);
+    });
+    splitObs.unobserve(entry.target);
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.section-title, .hero__title').forEach(el => splitObs.observe(el));
+
+/* ── Parallax on section images ───────────────── */
+const parallaxImgs = document.querySelectorAll('.about__image img, .gallery__item img');
+window.addEventListener('scroll', () => {
+  parallaxImgs.forEach(img => {
+    const rect = img.getBoundingClientRect();
+    const center = rect.top + rect.height / 2 - window.innerHeight / 2;
+    img.style.transform = `translateY(${center * 0.1}px) scale(1.08)`;
+  });
+}, { passive: true });
+
+/* ── 3D tilt on menu cards ────────────────────── */
+document.querySelectorAll('.menu__card, .menu__featured').forEach(card => {
+  card.classList.add('tilt');
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width  - 0.5;
+    const y = (e.clientY - r.top)  / r.height - 0.5;
+    card.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 6}deg) translateZ(6px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(800px) rotateY(0) rotateX(0) translateZ(0)';
+  });
+});
+
+/* ── Magnetic pull on hero buttons ───────────── */
+document.querySelectorAll('.hero__ctas .btn').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const r = btn.getBoundingClientRect();
+    const x = (e.clientX - r.left - r.width  / 2) * 0.25;
+    const y = (e.clientY - r.top  - r.height / 2) * 0.25;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+});
+
 /* ── Smooth nav links ─────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
