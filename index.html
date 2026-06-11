@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Pausa – Poke Bowl · Compiègne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo-wrap">
+      <img src="assets/images/logo.jpeg" alt="La Pausa Poke Bowl" class="nav__logo">
+    </a>
+    <ul class="nav__links">
+      <li><a href="#about">Histoire</a></li>
+      <li><a href="#menu">La carte</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+33365350104" class="btn btn--nav">Réserver</a>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about">Histoire</a></li>
+      <li><a href="#menu">La carte</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+33365350104" class="btn btn--primary">Appeler</a>
+  </div>
+
+  <!-- ─── Hero ────────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <img src="assets/images/poke-bowl.jpeg" alt="Poke Bowl La Pausa" class="hero__img" id="heroImg">
+      <div class="hero__vignette"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">Compiègne · France</p>
+      <h1 class="hero__title reveal">L'art du<br><em>Poke Bowl</em></h1>
+      <p class="hero__sub reveal">Des ingrédients frais, des saveurs authentiques —<br>une pause qui fait vraiment du bien.</p>
+      <div class="hero__ctas reveal">
+        <a href="#menu" class="btn btn--primary">Découvrir la carte</a>
+        <a href="#contact" class="btn btn--ghost">Nous trouver</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="hero__scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- ─── Ribbon ──────────────────────────────────────────────────── -->
+  <div class="ribbon">
+    <div class="ribbon__track">
+      <span>Fait Maison</span><span class="ribbon__dot">·</span>
+      <span>Produits Frais</span><span class="ribbon__dot">·</span>
+      <span>Sashimi Premium</span><span class="ribbon__dot">·</span>
+      <span>Boissons Artisanales</span><span class="ribbon__dot">·</span>
+      <span>Mar – Sam · 11h30 – 21h30</span><span class="ribbon__dot">·</span>
+      <span>Fait Maison</span><span class="ribbon__dot">·</span>
+      <span>Produits Frais</span><span class="ribbon__dot">·</span>
+      <span>Sashimi Premium</span><span class="ribbon__dot">·</span>
+      <span>Boissons Artisanales</span><span class="ribbon__dot">·</span>
+      <span>Mar – Sam · 11h30 – 21h30</span><span class="ribbon__dot">·</span>
+    </div>
+  </div>
+
+  <!-- ─── About ───────────────────────────────────────────────────── -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual reveal-left">
+          <div class="about__img-wrap">
+            <img src="assets/images/salmon2.jpeg" alt="Poke Bowl frais du jour">
+          </div>
+          <div class="about__badge">
+            <span class="about__badge-big">100%</span>
+            <span class="about__badge-small">Frais du jour</span>
+          </div>
+        </div>
+        <div class="about__text reveal-right">
+          <span class="label">Notre histoire</span>
+          <h2 class="section-title">Une pause qui<br>vous ressemble</h2>
+          <p>La Pausa est née d'une passion simple : offrir à Compiègne une cuisine fraîche, colorée et généreuse, inspirée des poke bowls hawaïens et sublimée par des produits de saison soigneusement sélectionnés.</p>
+          <p>Chaque bowl est une composition unique — choisissez votre base, vos protéines, vos toppings et votre sauce pour un résultat qui vous ressemble vraiment.</p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <strong>Frais</strong>
+              <span>Sélectionné chaque matin</span>
+            </div>
+            <div class="about__divider"></div>
+            <div class="about__stat">
+              <strong>Maison</strong>
+              <span>Préparé à la minute</span>
+            </div>
+            <div class="about__divider"></div>
+            <div class="about__stat">
+              <strong>Premium</strong>
+              <span>Qualité sashimi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Values ──────────────────────────────────────────────────── -->
+  <section class="values">
+    <div class="container">
+      <div class="values__grid">
+        <div class="value reveal">
+          <div class="value__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 8c-5 0-12 4-12 12 0 5 3 9 7 11v5h10v-5c4-2 7-6 7-11 0-8-7-12-12-12z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M18 36h12M20 40h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Produits frais</h3>
+          <p>Chaque ingrédient est sélectionné le matin même pour une fraîcheur optimale.</p>
+        </div>
+        <div class="value reveal">
+          <div class="value__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M12 40V22M24 40V12M36 40V28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 40h32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Fait maison</h3>
+          <p>Sauces, marinades et desserts préparés artisanalement dans notre cuisine.</p>
+        </div>
+        <div class="value reveal">
+          <div class="value__icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="1.5"/><path d="M24 16v8l6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Personnalisable</h3>
+          <p>Composez votre bowl selon vos goûts et vos envies du moment.</p>
+        </div>
+        <div class="value reveal">
+          <div class="value__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M10 16c0-2.2 1.8-4 4-4h20c2.2 0 4 1.8 4 4v16c0 2.2-1.8 4-4 4H14c-2.2 0-4-1.8-4-4V16z" stroke="currentColor" stroke-width="1.5"/><path d="M10 22h28" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="31" r="2" fill="currentColor"/><path d="M24 31h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Paiement facile</h3>
+          <p>Apple Pay et paiement sans contact acceptés pour votre confort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Menu ─────────────────────────────────────────────────────── -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">La carte</span>
+        <h2 class="section-title">Nos créations</h2>
+        <p class="section-sub">Des bowls généreux, colorés et savoureux — personnalisables selon vos envies.</p>
+      </div>
+
+      <!-- Row 1 : Featured + 2 cards -->
+      <div class="menu__row menu__row--featured">
+        <div class="menu__featured reveal-left">
+          <div class="menu__img-wrap">
+            <img src="assets/images/poke-bowl.jpeg" alt="Bowl Saumon Signature">
+            <div class="menu__img-tag">Signature</div>
+          </div>
+          <div class="menu__info">
+            <h3>Le Saumon</h3>
+            <p>Saumon premium qualité sashimi, oignons marinés, radis, carottes râpées, avocat, riz vinaigré, sauce maison.</p>
+            <div class="menu__footer">
+              <span class="menu__price">À partir de 14€</span>
+              <span class="menu__badge">⭐ Favori</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu__side-cards">
+          <div class="menu__card reveal">
+            <div class="menu__card-img">
+              <img src="assets/images/falafel.jpeg" alt="Bowl Végétarien Falafel">
+            </div>
+            <div class="menu__card-info">
+              <span class="menu__card-tag">Végétarien</span>
+              <h4>Le Falafel</h4>
+              <p>Falafels maison, grenade, edamame, mangue, algues, carottes, concombre, riz.</p>
+              <span class="menu__price">À partir de 13€</span>
+            </div>
+          </div>
+          <div class="menu__card reveal">
+            <div class="menu__card-img">
+              <img src="assets/images/fruit-bowl.jpeg" alt="Bowl Fruits & Granola">
+            </div>
+            <div class="menu__card-info">
+              <span class="menu__card-tag">Sweet Bowl</span>
+              <h4>Le Fruité</h4>
+              <p>Yaourt crémeux, mangue fraîche, fraises, granola artisanal, noix de coco râpée, fruits secs.</p>
+              <span class="menu__price">À partir de 9€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 : Honey + Matcha + CTA -->
+      <div class="menu__row menu__row--trio">
+        <div class="menu__card reveal">
+          <div class="menu__card-img">
+            <img src="assets/images/honey.jpeg" alt="Dessert Honey">
+          </div>
+          <div class="menu__card-info">
+            <span class="menu__card-tag">Dessert</span>
+            <h4>Honey ♡</h4>
+            <p>Crème glacée, framboises fraîches, noisettes caramélisées, coulis de miel artisanal.</p>
+            <span class="menu__price">6€</span>
+          </div>
+        </div>
+        <div class="menu__card reveal">
+          <div class="menu__card-img">
+            <img src="assets/images/matcha.jpeg" alt="Matcha Latte Glacé">
+          </div>
+          <div class="menu__card-info">
+            <span class="menu__card-tag">Boisson</span>
+            <h4>Matcha Latte</h4>
+            <p>Thé matcha japonais premium, lait végétal onctueux, servi glacé avec une paille en bambou.</p>
+            <span class="menu__price">5€</span>
+          </div>
+        </div>
+        <div class="menu__card menu__card--cta reveal">
+          <div class="menu__card-cta-content">
+            <span class="menu__card-tag">Personnalisé</span>
+            <h4>Votre Bowl</h4>
+            <p>Choisissez votre base, protéines, toppings et sauce pour un bowl 100% vous.</p>
+            <a href="tel:+33365350104" class="btn btn--sage btn--sm">Nous appeler</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Gallery ─────────────────────────────────────────────────── -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery__header reveal">
+        <span class="label label--light">Galerie</span>
+        <h2 class="section-title section-title--light">Chaque bowl,<br>une œuvre</h2>
+      </div>
+    </div>
+    <div class="gallery__grid">
+      <div class="gallery__item gallery__item--tall reveal">
+        <img src="assets/images/poke-bowl.jpeg" alt="Le Saumon Signature">
+        <div class="gallery__caption"><span>Le Saumon Signature</span></div>
+      </div>
+      <div class="gallery__item reveal">
+        <img src="assets/images/salmon2.jpeg" alt="Bowl Saumon Close-up">
+        <div class="gallery__caption"><span>Fraîcheur du jour</span></div>
+      </div>
+      <div class="gallery__item reveal">
+        <img src="assets/images/falafel.jpeg" alt="Bowl Végétarien">
+        <div class="gallery__caption"><span>Le Falafel</span></div>
+      </div>
+      <div class="gallery__item reveal">
+        <img src="assets/images/honey.jpeg" alt="Honey Dessert">
+        <div class="gallery__caption"><span>Honey ♡</span></div>
+      </div>
+      <div class="gallery__item reveal">
+        <img src="assets/images/matcha.jpeg" alt="Matcha Latte">
+        <div class="gallery__caption"><span>Matcha Latte</span></div>
+      </div>
+      <div class="gallery__item reveal">
+        <img src="assets/images/fruit-bowl.jpeg" alt="Sweet Bowl">
+        <div class="gallery__caption"><span>Le Fruité</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ─────────────────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__text reveal-left">
+          <span class="label">Nous trouver</span>
+          <h2 class="section-title">Venez faire<br>votre pause</h2>
+          <div class="contact__items">
+            <a href="tel:+33365350104" class="contact__item">
+              <div class="contact__item-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <strong>Téléphone</strong>
+                <p>+33 3 65 35 01 04</p>
+              </div>
+            </a>
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <strong>Adresse</strong>
+                <p>Compiègne, France</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h20M7 15h.01M11 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <strong>Paiement</strong>
+                <p>Apple Pay · Sans contact · CB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__hours reveal-right">
+          <span class="label">Horaires</span>
+          <h3>Quand nous rendre visite</h3>
+          <div class="hours">
+            <div class="hours__row hours__row--closed">
+              <span class="hours__day">Lundi</span>
+              <span class="hours__time">Fermé</span>
+            </div>
+            <div class="hours__row hours__row--open">
+              <span class="hours__day">Mardi</span>
+              <span class="hours__time">11h30 – 21h30</span>
+            </div>
+            <div class="hours__row hours__row--open">
+              <span class="hours__day">Mercredi</span>
+              <span class="hours__time">11h30 – 21h30</span>
+            </div>
+            <div class="hours__row hours__row--open">
+              <span class="hours__day">Jeudi</span>
+              <span class="hours__time">11h30 – 21h30</span>
+            </div>
+            <div class="hours__row hours__row--open">
+              <span class="hours__day">Vendredi</span>
+              <span class="hours__time">11h30 – 21h30</span>
+            </div>
+            <div class="hours__row hours__row--open">
+              <span class="hours__day">Samedi</span>
+              <span class="hours__time">11h30 – 21h30</span>
+            </div>
+            <div class="hours__row hours__row--closed">
+              <span class="hours__day">Dimanche</span>
+              <span class="hours__time">Fermé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ──────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/images/logo.jpeg" alt="La Pausa Poke Bowl" class="footer__logo">
+          <p>L'art du poke bowl à Compiègne.<br>Frais, coloré, savoureux.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">Notre histoire</a></li>
+            <li><a href="#menu">La carte</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <p><a href="tel:+33365350104">+33 3 65 35 01 04</a></p>
+          <p>Compiègne, France</p>
+          <p>Mar – Sam · 11h30 – 21h30</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 La Pausa Poke Bowl · Tous droits réservés</span>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
