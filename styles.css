@@ -116,13 +116,15 @@ ul { list-style: none; }
 .btn--sm       { padding: 10px 22px; font-size: .8rem; }
 
 /* ── Scroll reveal ───────────────────────────────── */
-.reveal, .reveal-left, .reveal-right {
+/* Hidden state only when JS is running (html.js) —
+   without JS (ex: aperçu iOS) tout reste visible */
+.js .reveal, .js .reveal-left, .js .reveal-right {
   opacity: 0;
   transition: opacity .8s var(--ease), transform .8s var(--ease);
 }
-.reveal        { transform: translateY(40px); }
-.reveal-left   { transform: translateX(-60px); }
-.reveal-right  { transform: translateX(60px); }
+.js .reveal        { transform: translateY(40px); }
+.js .reveal-left   { transform: translateX(-60px); }
+.js .reveal-right  { transform: translateX(60px); }
 .revealed {
   opacity: 1 !important;
   transform: none !important;
@@ -143,6 +145,7 @@ ul { list-style: none; }
   padding: 0 40px;
   transition: background .4s, backdrop-filter .4s, box-shadow .4s;
 }
+.no-js .nav { position: absolute; }
 .nav.scrolled {
   background: rgba(245,240,230,.92);
   backdrop-filter: blur(16px);
