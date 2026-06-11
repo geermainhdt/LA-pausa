@@ -94,8 +94,8 @@ const splitObs = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 document.querySelectorAll('.section-title, .hero__title').forEach(el => splitObs.observe(el));
 
-/* ── Parallax on section images ───────────────── */
-const parallaxImgs = document.querySelectorAll('.about__image img, .gallery__item img');
+/* ── Parallax on about image only ─────────────── */
+const parallaxImgs = document.querySelectorAll('.about__image img');
 window.addEventListener('scroll', () => {
   parallaxImgs.forEach(img => {
     const rect = img.getBoundingClientRect();
