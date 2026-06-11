@@ -1,5 +1,14 @@
 /* La Pausa – Interactions & Animations */
 
+/* ── Maps link : Apple Plans sur iOS/macOS, Google Maps ailleurs ── */
+const mapsLink = document.getElementById('mapsLink');
+if (mapsLink) {
+  const isApple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+  mapsLink.href = isApple
+    ? 'https://maps.apple.com/?q=La+Pausa+Compi%C3%A8gne&ll=49.416666,2.8260489'
+    : 'https://www.google.com/maps/place/LA+PAUSA+Compi%C3%A8gne/@49.4167357,2.8257668,20z/data=!4m14!1m7!3m6!1s0x47e7d79e4e5efdc7:0xb8abd7ce74dc7eff!2sPastel+Caf%C3%A9!8m2!3d49.4172156!4d2.8256724!16s%2Fg%2F11vygn4849!3m5!1s0x47e7d70cfff060ab:0xaeff749cc271b30e!8m2!3d49.416666!4d2.8260489!16s%2Fg%2F11tn_j0wcz?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D';
+}
+
 /* ── Nav scroll behaviour ─────────────────────── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
